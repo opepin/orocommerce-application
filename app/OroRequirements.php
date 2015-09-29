@@ -353,7 +353,7 @@ class OroRequirements extends SymfonyRequirements
 
         $fileLength = trim($getConf->getOutput());
 
-        return $fileLength == 255;
+        return $fileLength >= 242;
     }
 
     /**

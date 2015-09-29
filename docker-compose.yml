@@ -1,0 +1,21 @@
+webdev:
+  build: .
+  links:
+    - mysql 
+  entrypoint: ["infra/setup.sh"]
+  environment:
+    - ORO_APPLICATION_URL=http://orocommerce.docker/
+    - ORO_ENV=prod
+    - ORO_ORG=B2B
+    - ORO_ADMIN_USER=admin
+    - ORO_ADMIN_EMAIL=admin@mailinator.com
+    - ORO_ADMIN_FIRST=First
+    - ORO_ADMIN_LAST=First
+    - ORO_ADMIN_PW=123456
+    - VIRTUAL_HOST=orocommerce.docker
+
+mysql:
+  image: mysql:5.6 
+  environment:
+     - MYSQL_ROOT_PASSWORD=verysecret
+

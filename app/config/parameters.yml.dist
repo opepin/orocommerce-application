@@ -1,10 +1,10 @@
 parameters:
     database_driver:        pdo_mysql
-    database_host:          127.0.0.1
+    database_host:          mysql
     database_port:          ~
     database_name:          b2b_dev
-    database_user:          root
-    database_password:      ~
+    database_user:          b2b_dev
+    database_password:      b2b_dev
 
     mailer_transport:       mail
     mailer_host:            127.0.0.1
