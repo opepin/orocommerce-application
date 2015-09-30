@@ -4,11 +4,13 @@
 sudo gem install thor
 brew install https://github.com/codekitchen/dinghy/raw/latest/dinghy.rb
 curl -L https://github.com/docker/compose/releases/download/1.3.3/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+sudo dinghy up
 
 ## Install oro-commerce
 git clone --recursive https://github.com/orocrm/orocommerce-application.git
 
 ## bootstrap environement (config in docker-compose.yml)
+docker-compose build webdev
 docker-compose up -d webdev
 
 ## open 
