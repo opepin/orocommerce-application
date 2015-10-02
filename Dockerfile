@@ -26,7 +26,9 @@ echo extension=apc.so >> /usr/local/etc/php/conf.d/apc.ini && \
 apt-get install -y php-pear php5-dev make libpcre3-dev && \
 pecl install -f apc
 
-COPY . /opt/oro/
+COPY app /opt/oro/app
+COPY web /opt/oro/web
+COPY src /opt/oro/src
 RUN  php composer.phar run-script post-install-cmd 
 
 EXPOSE 80
